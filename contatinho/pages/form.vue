@@ -27,6 +27,8 @@ onMounted(() => {
         contact.name = name;
         contact.email = email;
         contact.phone = phone;
+
+        
     }
 })
 
