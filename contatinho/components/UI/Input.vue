@@ -8,7 +8,7 @@
             :type="props.type" 
             :id="props.label"
             :value="props.modelValue" 
-            @input="$enit('update:modelValue',$event.target.value)"/>
+            @input="$emit('update:modelValue',$event.target.value)"/>
         </fieldset>
 </template>
 
