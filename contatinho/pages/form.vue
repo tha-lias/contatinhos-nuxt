@@ -11,7 +11,7 @@
 <script setup>
 const { createContact, getContact, updateContact } = useContacts()
 const router = useRouter()
-const route = useRouter()
+const route = useRoute()
 const contact = reactive({
   id: "",
   name: "",
@@ -27,8 +27,6 @@ onMounted(() => {
         contact.name = name;
         contact.email = email;
         contact.phone = phone;
-
-        
     }
 })
 

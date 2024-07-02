@@ -8,7 +8,7 @@ export default () => {
         contactList().value.push({id, name, email, phone})
     }
 
-    const updateContact = ({ id, name, email, phone}) => {
+    const updateContact = (id, {name, email, phone}) => {
         contactList().value = contactList().value.map(contact => {
             if (contact.id === id) {
                 return {...contact, name, email, phone}
