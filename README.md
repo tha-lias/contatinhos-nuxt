@@ -7,7 +7,7 @@
 </p>
 
 ### Objetivo:
-<p>Esse projeto tem como principal objetivo praticar as stacks: Vue.js 3, Nuxt.js e Tailwind CSS.</p>
+<p>Esse projeto tem como principal objetivo praticar as stacks: Vue.js 3, Nuxt.js e Tailwind CSS, além da criação e uso de componentes.</p>
 
 ### Descrição:
 <p>O projeto consiste em uma lista de contatos onde é possível:</p>
