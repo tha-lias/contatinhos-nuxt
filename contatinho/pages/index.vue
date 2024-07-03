@@ -6,7 +6,7 @@
             {{ contact.name }}
             <template #actions>
                 <button @click="editContat(contact.id)">Editar</button>
-                <button>Excluir</button>
+                <button @click="removeContact(contact.id)">Excluir</button>
             </template>
         </ListaItens>
 
@@ -17,8 +17,19 @@
 
 <script setup>
 const router = useRouter();
-const { contactList } = useContacts();
+const { contactList , deleteContact} = useContacts();
 const contacts = contactList()
+
+useHead({
+    title: 'Contatinho.com',
+    meta: [
+        {name: 'description', content: 'Aplicativo de lista de contatos'},
+        //twitter
+        {name: 'twitter:title', content: 'Contatinho.com'},
+        // SEO geral
+        {property:'og:title', content: "Contatinho.com"}
+    ]
+})
 
 const addContact = () => {
     router.push('/form')
@@ -26,5 +37,9 @@ const addContact = () => {
 
 const editContat = (id) => {
     router.push({ path: '/form', query: {id} })
+}
+
+const removeContact = (id) => {
+    deleteContact(id);
 }
 </script>

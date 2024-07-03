@@ -4,14 +4,13 @@ export default () => {
 
     const createContact = ({ name, email, phone }) => {
         const id = uuid()
-
         contactList().value.push({id, name, email, phone})
     }
 
     const updateContact = (id, {name, email, phone}) => {
         contactList().value = contactList().value.map(contact => {
             if (contact.id === id) {
-                return {...contact, name, email, phone}
+                return { ...contact, name, email, phone}
             }
         })
     }
@@ -20,7 +19,7 @@ export default () => {
         contactList().value = contactList().value.filter(contact => contact.id != id)
     }
 
-    const getContacts = () => {
+    const getContact = (id) => {
         return contactList().value.find(contact => contact.id === id)
     }
 
@@ -29,7 +28,6 @@ export default () => {
         createContact,
         updateContact,
         deleteContact,
-        getContacts,
-
+        getContact,
     }
 }
